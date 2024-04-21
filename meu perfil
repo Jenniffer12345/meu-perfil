@@ -1,0 +1,95 @@
+import 'package:flutter/material.dart';
+
+class PerfilPage extends StatelessWidget {
+  const PerfilPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: SingleChildScrollView(
+        child: Perfil(),
+      ),
+    );
+  }
+}
+
+class Perfil extends StatelessWidget {
+  const Perfil({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          RichText(
+            text: const TextSpan(
+              style: TextStyle(fontSize: 20, color: Colors.black),
+              children: [
+                TextSpan(
+                  text: 'Nome: ',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                TextSpan(
+                  text: 'Jenniffer Julia Ogliari',
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 10),
+          RichText(
+            text: const TextSpan(
+              style: TextStyle(fontSize: 18, color: Colors.black),
+              children: [
+                TextSpan(
+                  text: 'Endereço: ',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                TextSpan(
+                  text: 'Rua das Palmas',
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 10),
+          RichText(
+            text: const TextSpan(
+              style: TextStyle(fontSize: 18, color: Colors.black),
+              children: [
+                TextSpan(
+                  text: 'Telefone: ',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                TextSpan(
+                  text: '(46)984219313',
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 10),
+          RichText(
+            text: const TextSpan(
+              style: TextStyle(fontSize: 18, color: Colors.black),
+              children: [
+                TextSpan(
+                  text: 'E-mail: ',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                TextSpan(
+                  text: 'jennifferogliari@gmail.com',
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+void main() {
+  runApp(const MaterialApp(
+    home: PerfilPage(),
+  ));
+}
